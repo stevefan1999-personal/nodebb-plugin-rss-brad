@@ -1,8 +1,8 @@
 {
-    "id": "nodebb-plugin-rss",
+    "id": "nodebb-plugin-rss-brad",
     "name": "RSS Feed",
-    "description": "A RSS parser for NodeBB",
-    "url": "https://github.com/barisusakli/nodebb-plugin-rss",
+    "description": "A RSS parser for NodeBB. Brad fork.",
+    "url": "https://github.com/o1brad/nodebb-plugin-rss-brad",
     "library": "./index.js",
     "hooks": [
         { "hook": "static:app.load", "method": "init" },
