@@ -30,8 +30,8 @@ RssPlugin.init = async function (params) {
  * Called on `action:topic.purge`
  */
 RssPlugin.onTopicPurge = async function (data) {
-	const feedUrls = await db.getSetMembers('nodebb-plugin-rss:feeds');
-	const keys = feedUrls.map(url => `nodebb-plugin-rss:feed:${url}:uuid`);
+	const feedUrls = await db.getSetMembers('nodebb-plugin-rss-brad:feeds');
+	const keys = feedUrls.map(url => `nodebb-plugin-rss-brad:feed:${url}:uuid`);
 	await db.sortedSetsRemoveRangeByScore(keys, data.topic.tid, data.topic.tid);
 };
 
@@ -69,8 +69,8 @@ RssPlugin.admin.menu = async function (custom_header) {
  * Called on `action:plugin.deactivate`
  */
 RssPlugin.admin.deactivate = function (data) {
-	if (data.id === 'nodebb-plugin-rss') {
-		pubsub.publish('nodebb-plugin-rss:deactivate');
+	if (data.id === 'nodebb-plugin-rss-brad') {
+		pubsub.publish('nodebb-plugin-rss-brad:deactivate');
 	}
 };
 
@@ -78,7 +78,7 @@ RssPlugin.admin.deactivate = function (data) {
  * Called on `action:plugin.uninstall`
  */
 RssPlugin.admin.uninstall = function (data) {
-	if (data.id === 'nodebb-plugin-rss') {
+	if (data.id === 'nodebb-plugin-rss-brad') {
 		database.deleteFeeds();
 	}
 };
