@@ -1,7 +1,7 @@
 {
-  "name": "nodebb-plugin-rss",
+  "name": "nodebb-plugin-rss-brad",
   "version": "4.0.0",
-  "description": "A RSS Plugin to pull feeds and post them in to categories",
+  "description": "A RSS Plugin to pull feeds and post them in to categories. Brad fork.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
