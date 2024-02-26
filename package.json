@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-rss-brad",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "A RSS Plugin to pull feeds and post them in to categories. Brad fork.",
   "main": "index.js",
   "scripts": {
